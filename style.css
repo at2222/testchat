@@ -1,0 +1,131 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+body {
+    width: 480px;
+   
+    margin: 10px auto;
+      
+    border-top: 5px solid #C3C3C3;
+    border-left: 6px solid #C3C3C3;
+    border-right: 6px solid #C3C3C3;
+    border-image: linear-gradient(to right top, white,#C3C3C3, white);
+    border-image-slice: 1;
+    
+}
+
+.image-logo {
+    width: 480px;
+    height: 116px;
+}
+
+
+body img {
+    margin-top: 0;
+}
+
+.left-block, .right-block {
+    margin-top: 0;
+    height: 144px;
+    width: auto;
+}
+
+.left-block {
+    background-color: #DDE1E2;
+}
+
+.right-block {
+    background-color: #D3D7D8;
+}
+
+.textarea {
+    border-top: 1px solid #D3D7D8;
+    background-color: #DDE1E2;
+    padding: 24px 30px;
+    width: auto;
+    
+    
+}
+
+#textarea {
+    width: 420px;
+    height: 80px;
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px grey;
+    font-size: 19px;
+}
+
+.btn {
+    border-top: 1px solid #D3D7D8;
+    width: auto;
+    background-color: #DDE1E2;
+    padding: 24px 30px;
+    
+}
+
+button{
+    background-color: #2589CC;
+    color: white;
+    height: 60px;
+    width: 420px;
+    border-radius: 8px;
+    border: 0;
+    font-size: 26px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: blue;
+}
+
+.avatar-left {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    margin: 13px 15px;
+    float: left;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.avatar-right {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    margin: 13px 15px;
+    float: right;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.left-text {
+    float: left;
+    width: 305px;
+    height: 114px;
+    background-color: white;
+    margin-top: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    font-size: 19px;
+   
+    
+}
+
+.right-text {
+    float: right;
+    width: 305px;
+    height: 114px;
+    background-color: white;
+    margin-top: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    font-size: 19px;
+   
+}

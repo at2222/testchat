@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="avatars">
+        <img class="image-logo" src="images/logo.jpg" alt="Logo">
+        <div class="left-block">
+            <img class="avatar-left" src="images/person1.jpg" alt=""> 
+            <p class="left-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor.</p> 
+        </div>
+        <div class="right-block"> 
+            <img class="avatar-right" src="images/person2.jpg" alt=""> 
+            <div class="right-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor.</div>
+        </div>
+        <div class="left-block"> 
+            <img class="avatar-left" src="images/person1.jpg" alt=""> 
+            <div class="left-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor.</div>
+        </div>
+    </div>
+    <div class="textarea">
+        <textarea name="" id="textarea"  cols="30" rows="9"></textarea>
+    </div>    
+        <div class="btn"><button class="button" >Send message</button>
+        </div>
+    <script>
+        let button = document.querySelector("button");
+        let comment = document.querySelector(".right-block");
+        let avatars = document.querySelectorAll(".avatars");
+
+        //console.log(comment);
+
+        function findLastElement() {
+            for (const node of avatars) { 
+            let lastElement = node.lastElementChild;
+            lastElement.style.border = "1px solid orange";
+            //let insert = lastElement.after(comment);
+            return lastElement;
+            //console.log(lastElement);
+            };  
+        }
+        
+        
+
+        function addNewComment() {
+            let lastElement=findLastElement();
+            //let deepCopy = comment.cloneNode(true);
+            return lastElement.after(comment);
+            
+        }
+        
+    
+        button.onclick = function() {
+            addNewComment()
+            
+        };
+
+    </script>
+</body>
+</html>
