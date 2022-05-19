@@ -19,8 +19,24 @@ body {
 .image-logo {
     width: 480px;
     height: 116px;
+    display: block;
+    z-index: -1;
 }
 
+.header {
+    position: relative;
+}
+
+.text-logo {
+    color: white;
+    position: absolute;
+    top:-6px;
+    left:25px;
+    font-size: 3em;
+    line-height: 2.5em;
+    text-shadow: 3px 3px #000;
+    z-index: 1;
+}
 
 body img {
     margin-top: 0;
@@ -63,7 +79,7 @@ body img {
     border-top: 1px solid #D3D7D8;
     width: auto;
     background-color: #DDE1E2;
-    padding: 24px 30px;
+    padding: 22px 30px;
     
 }
 
