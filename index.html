@@ -27,43 +27,49 @@
         </div>
     </div>
     <div class="textarea">
-        <textarea name="" id="textarea"  cols="30" rows="9"></textarea>
+        <form name="textAreaForm">
+        <textarea name="textarea" id="textarea" cols="30" rows="9"></textarea>
+        </form>
     </div>    
         <div class="btn"><button class="button" >Send message</button>
         </div>
 
     <script>
-        let button = document.querySelector("button");
-        let comment = document.querySelector(".right-block");
-        let avatars = document.querySelectorAll(".avatars");
+            function validareForm() {
+                let form = document.forms.textAreaForm; 
+                let insertText=form.textarea.value;
+                if (!insertText) {
+                    return alert("Insert some text");
+                }
+                else if (insertText.length<5) {
+                    return alert("Too short text");
+                }
+                else if (6<=insertText.length<=100) {
+                    return insertText;
+                }
+                else if (insertText.length>=100) {
+                    return alert("Too long text");
+                }
+            }
 
-        //console.log(comment);
+            function createElement(text) {
+                let comment = document.querySelector(".right-block");
+                let deepCopy = comment.cloneNode(true);  
+                let innerText=deepCopy.querySelector(".right-text");
+                innerText.textContent=text;
+                return deepCopy;
+            }
+                       
+            function insertElement(insertText) {
+                let avatars = document.querySelector(".avatars"); 
+                return avatars.appendChild(insertText);
+            }
 
-        function findLastElement() {
-            for (const node of avatars) { 
-            let lastElement = node.lastElementChild;
-            lastElement.style.border = "1px solid orange";
-            //let insert = lastElement.after(comment);
-            return lastElement;
-            //console.log(lastElement);
-            };  
-        }
-        
-        
-
-        function addNewComment() {
-            let lastElement=findLastElement();
-            //let deepCopy = comment.cloneNode(true);
-            return lastElement.after(comment);
-            
-        }
-        
-    
-        button.onclick = function() {
-            addNewComment()
-            
-        };
-
+            document.querySelector(".button").addEventListener("click", function () {
+                let formText=validareForm();
+                let insertText = createElement(formText);
+                insertElement(insertText);
+            });
     </script>
 </body>
 </html>
