@@ -46,16 +46,15 @@ function insertElement(insertText) {
     return avatars.appendChild(insertText);
 }
 
-function botAnswer() {
-    createBotElement();
-    insertBotElement();
-}
-
 document.querySelector(".button").addEventListener("click", function () {
     let formText=validareForm();
     if (formText) {
         let insertText = createElement(formText);
         insertElement(insertText);
+        function botAnswer() {
+            createBotElement();
+            insertBotElement();
+        }
         setTimeout(botAnswer, 2000);
         document.getElementById("textarea").value = "";
     }
