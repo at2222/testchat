@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SPDU chat</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,44 +33,6 @@
         </form>
     </div>    
         <div class="btn"><button class="button" >Send message</button>
-        </div>
-
-    <script>
-            function validareForm() {
-                let form = document.forms.textAreaForm; 
-                let insertText=form.textarea.value;
-                if (!insertText) {
-                    return alert("Insert some text");
-                }
-                else if (insertText.length<5) {
-                    return alert("Too short text");
-                }
-                else if (6<=insertText.length<=100) {
-                    return insertText;
-                }
-                else if (insertText.length>=100) {
-                    return alert("Too long text");
-                }
-            }
-
-            function createElement(text) {
-                let comment = document.querySelector(".right-block");
-                let deepCopy = comment.cloneNode(true);  
-                let innerText=deepCopy.querySelector(".right-text");
-                innerText.textContent=text;
-                return deepCopy;
-            }
-                       
-            function insertElement(insertText) {
-                let avatars = document.querySelector(".avatars"); 
-                return avatars.appendChild(insertText);
-            }
-
-            document.querySelector(".button").addEventListener("click", function () {
-                let formText=validareForm();
-                let insertText = createElement(formText);
-                insertElement(insertText);
-            });
-    </script>
+    </div>
 </body>
 </html>
