@@ -8,10 +8,10 @@ function validareForm() {
     else if (insertText.length<5) {
         return alert("Too short text");
     }
-    else if (6<=insertText.length<=100) {
+    else if (6<insertText.length<=50) {
         return insertText;
     }
-    else if (insertText.length>=100) {
+    else if (insertText.length>50) {
         return alert("Too long text");
     }
 }
@@ -29,7 +29,8 @@ function insertElement(insertText) {
     return avatars.appendChild(insertText);
 }
 
-document.querySelector(".button").addEventListener("click", function () {
+let btn = document.querySelector(".button");
+btn.addEventListener("click", function () {
     let formText=validareForm();
     if (formText) {
         let insertText = createElement(formText);
